@@ -1,0 +1,16 @@
+<p>
+    <a href="#">Home</a>
+</p>
+forecast for {{ city }}
+<hr />
+Days: <a href="#/forecast/2" class="bg-primary"> 2 </a> |
+      <a href="#/forecast/5" class="bg-primary"> 5 </a> |
+      <a href="#/forecast/10" class="bg-primary"> 10 </a>
+<hr />
+<div ng-repeat="w in weatherResult.list">
+    <div class=row>
+        <div class="col-md-12">
+            <weather-report weather-day="w" convert-to-standard="convertToFarenheit(dayTimeTemp)" convert-to-date="convertToDate(dt)" date-format="MMM, d, y"></weather-report>
+        </div>
+    </div>
+</div>
